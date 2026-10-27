@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "luispaulva-taildist"
+version = "0.1.0"
+description = "统计各类别样本量分布，给出长尾截断点与被忽略类别的规模"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "luispaulva" }]
+keywords = ["cli", "analysis", "observability", "evaluation"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://luispaulva.github.io"
+Repository = "https://github.com/luispaulva/taildist"
+Issues = "https://github.com/luispaulva/taildist/issues"
+
+[project.scripts]
+taildist = "taildist:main"
+
+[tool.setuptools]
+py-modules = ["taildist"]
